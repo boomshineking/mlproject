@@ -21,7 +21,8 @@ name='mlproject',
 version='0.0.1',
 author='Richard',
 author_email='r10053506@gmail.com',
-packages=find_packages(),
+packages=find_packages(where="src"),   # 👈 tells setuptools to look inside /src
+    package_dir={"": "src"}, 
 install_requires=get_requirements('requirements.txt')
 
 )
